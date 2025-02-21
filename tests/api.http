@@ -1,0 +1,31 @@
+
+### get models
+GET /v1/models HTTP/1.1
+Host: 127.0.0.1:4567
+
+
+### chat_completions
+POST /v1/chat/completions HTTP/1.1
+Host: 127.0.0.1:4567
+Content-Type: application/json
+
+{
+  "model": "LenML/gemma-2-2b-it-abliterated/gemma-2-2b-it-abliterated-Q6_K.gguf",
+  "messages": [
+    {"role": "user", "content": "100字介绍自己。"}
+  ],
+  "stream": true
+}
+
+### error test
+POST /v1/chat/completions HTTP/1.1
+Host: 127.0.0.1:4567
+Content-Type: application/json
+
+{
+  "model": "no-support-model",
+  "messages": [
+    {"role": "user", "content": "100字介绍自己。"}
+  ]
+}
+
