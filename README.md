@@ -12,7 +12,7 @@ Running local LLMs is as simple as breathing.
     - [ ] logprobs
     - [ ] fake multi-model (base on whisper/florence onnx model)
     - [ ] prompt cache
-    - [ ] vram manager: auto offload
+    - [ ] vram manager: auto offload / vram limit / cpu limit
 - [ ] Packaged to bin file
 - [ ] evaluator
   - [ ] Special API provided for model evaluation
@@ -28,6 +28,18 @@ pnpm install
 pnpm dev
 ```
 
+# Configure
+运行程序需要在执行目录下创建一个配置文件 `boot.config.json`
+
+```json
+{
+  "server": {
+    "port": 4567
+  },
+  "no_docs": false,
+  "model_dirs": ["~/llm_models","~/ggufs"]
+}
+```
 
 # LICENSE
 AGPL-3.0 license

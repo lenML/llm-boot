@@ -1,0 +1,7 @@
+{
+  "server": {
+    "port": 4567
+  },
+  "no_docs": false,
+  "model_dirs": ["~/llm_models"]
+}
